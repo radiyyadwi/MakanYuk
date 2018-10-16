@@ -1,0 +1,2 @@
+# MakanYuk
+Aplikasi MakanYuk
