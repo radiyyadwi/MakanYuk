@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:fontFamily="sans-serif"
+        android:text="CARI DAN TEMUKAN!"
+        android:textStyle="bold"
+        android:textColor="@color/yellowText"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="86dp"
+        android:contentDescription="search"
+        app:srcCompat="@drawable/search_icon" />
+
+    <TextView
+        android:id="@+id/caption"
+        android:layout_width="274dp"
+        android:layout_height="107dp"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="91dp"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="Fitur peta untuk melihat letak makanan yang tersedia untuk diberikan kepada orang yang membutuhkan."
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
