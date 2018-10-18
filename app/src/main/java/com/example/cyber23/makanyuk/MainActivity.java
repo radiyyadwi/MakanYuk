@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView[] mDots;
 
-    private Button mBackButton;
+    private Button mSkipButton;
     private Button mNextButton;
 
     private int mCurrentPage;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         mDotLayout =  findViewById(R.id.dotsLayout);
 
         mNextButton = findViewById(R.id.button_next);
-        mBackButton = findViewById(R.id.button_back);
+        mSkipButton = findViewById(R.id.button_skip);
 
         sliderAdapter = new SliderAdapter(this);
 
@@ -59,15 +59,15 @@ public class MainActivity extends AppCompatActivity {
                 mSlideViewPager.setCurrentItem(mCurrentPage+1);
 
                 if (mCurrentPage == mDots.length-1) {
-
+                    //change to next activity
                 }
             }
         });
 
-        mBackButton.setOnClickListener(new View.OnClickListener() {
+        mSkipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mSlideViewPager.setCurrentItem(mCurrentPage-1);
+                mSlideViewPager.setCurrentItem(mDots.length-1);
             }
         });
     }
@@ -103,25 +103,22 @@ public class MainActivity extends AppCompatActivity {
 
             if (i==0) {
                 mNextButton.setEnabled(true);
-                mBackButton.setEnabled(false);
-                mBackButton.setVisibility(View.INVISIBLE);
-
+                mSkipButton.setEnabled(true);
                 mNextButton.setText("Next");
-                mBackButton.setText("");
+                mSkipButton.setText("Skip");
             } else if (i==mDots.length - 1) {
                 mNextButton.setEnabled(true);
-                mBackButton.setEnabled(true);
-                mBackButton.setVisibility(View.VISIBLE);
+                mSkipButton.setEnabled(false);
+                mSkipButton.setVisibility(View.INVISIBLE);
 
                 mNextButton.setText("Finish");
-                mBackButton.setText("Back");
             } else {
                 mNextButton.setEnabled(true);
-                mBackButton.setEnabled(true);
-                mBackButton.setVisibility(View.VISIBLE);
+                mSkipButton.setEnabled(true);
+                mSkipButton.setVisibility(View.VISIBLE);
 
                 mNextButton.setText("Next");
-                mBackButton.setText("Back");
+                mSkipButton.setText("Skip");
             }
 
         }
